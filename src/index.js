@@ -1,5 +1,5 @@
-import Character from './function';
-
-const hero = new Character('Bowman');
-hero.inAttack;
-console.log(hero);
+import {Bowman} from './function';
+const bowman = new Bowman;
+bowman.inAttack = 'powerMode';
+bowman.inAttack;
+console.log(bowman);

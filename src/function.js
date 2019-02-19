@@ -1,11 +1,7 @@
-export default class Character {
+export class Character {
   constructor(type) {
-    this.type = type;
     this.level = 1;
     this.health = 100;
-    this.type = 'Bowman';
-    this.attack = 25;
-    this.defence = 25;
     this.powerMode = 0;
     this.attackCounter = 0;
   }
@@ -34,5 +30,14 @@ export default class Character {
         this.attackCounter += 1;
       }
     }
+  }
+}
+
+export class Bowman extends Character {
+  constructor() {
+    super();
+    this.type = 'Bowman';
+  this.attack = 25;
+  this.defence = 25;
   }
 }
