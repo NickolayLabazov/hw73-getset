@@ -2,7 +2,64 @@ import { Bowman } from '../src/function';
 
 const hero = new Bowman();
 
-test('Режим выключен, атака 1', () => {
+test('Режим выключен', () => {
+  const expected = 100;  
+  const received = hero.health;
+  expect(received).toBe(expected);
+});
+
+test('Режим выключен', () => {
+  const expected = 25;  
+  const received = hero.defence;
+  expect(received).toBe(expected);
+});
+
+test('Режим выключен', () => {
+  const expected = 25;  
+  const received = hero.attack;
+  expect(received).toBe(expected);
+});
+
+
+
+
+test('Режим включен', () => {
+  hero.powerMode();
+  const expected = 200;
+  const received = hero.health;;
+  expect(received).toBe(expected);
+});
+
+test('Режим включен', () => {
+  const expected = 50;
+  const received = hero.defence;;
+  expect(received).toBe(expected);
+});
+
+test('Режим включен', () => {
+  const expected = 50;
+  const received = hero.attack;;
+  expect(received).toBe(expected);
+});
+
+test('Отключение режима', () => {
+  hero.powerMode();
+  const expected = 100;
+  const received = hero.health;;
+  expect(received).toBe(expected);
+});
+
+
+
+
+
+
+
+
+
+
+
+/* test('Режим выключен, атака 1', () => {
   const expected = 25;
   hero.attackCount();
   const received = hero.getAttack;
@@ -68,3 +125,4 @@ test('Попытка повторного включения режима', () =
   const received = hero.getAttack;
   expect(received).toBe(expected);
 });
+ */

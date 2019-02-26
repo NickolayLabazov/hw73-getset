@@ -1,36 +1,18 @@
 import { Bowman } from './function';
 
 const bowman = new Bowman();
-bowman.attackCount();
-console.log(bowman.getHealth);
-console.log(bowman.getAttack);
-console.log(bowman.getDefence);
+console.log(bowman.health);
+console.log(bowman.attack);
+console.log(bowman.defence);
 
-bowman.inAttack = true;
+bowman.powerMode();
 
-bowman.attackCount();
-console.log(bowman.getHealth);
-console.log(bowman.getAttack);
-console.log(bowman.getDefence);
+console.log(bowman.health);
+console.log(bowman.attack);
+console.log(bowman.defence);
 
-bowman.attackCount();
-console.log(bowman.getHealth);
-console.log(bowman.getAttack);
-console.log(bowman.getDefence);
-
-bowman.attackCount();
-console.log(bowman.getHealth);
-console.log(bowman.getAttack);
-console.log(bowman.getDefence);
-
-bowman.attackCount();
-console.log(bowman.getHealth);
-console.log(bowman.getAttack);
-console.log(bowman.getDefence);
-
-bowman.inAttack = true;
-
-bowman.attackCount();
-console.log(bowman.getHealth);
-console.log(bowman.getAttack);
-console.log(bowman.getDefence);
+bowman.powerMode();
+console.log(bowman.health);
+console.log(bowman.attack);
+console.log(bowman.defence);
+ 
