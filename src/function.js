@@ -2,19 +2,33 @@ export class Character {
   constructor() {
     this.level = 1;
     this.health = 100;
-    this.mode = false;
-    
+    this.powerMode = false;
+    this.attackCounter = 0;
   }
 
-  powerMode(){
-      if (this.mode) {
-      this.mode = false;        
-    }else{this.mode = true;
-      }  
+  doAttack() {
+    if (this.attackCounter === 3) {
+      this.powerMode = false;
+    }
+    if (this.powerMode) {
+      this.attackCounter += 1;
+    }
+  }
+
+  get powerMode() {
+    return this._powerMode;
+  }
+
+  set powerMode(mode) {
+    if (!mode) {
+      this._powerMode = mode;
+    } else if (this.attackCounter === 0) {
+      this._powerMode = mode;
+    }
   }
 
   get health() {
-    if (this.mode) {
+    if (this.powerMode) {
       const health = this._health * 2;
       return health;
     }
@@ -23,10 +37,10 @@ export class Character {
 
   set health(health) {
     this._health = health;
-  } 
+  }
 
-   get attack() {
-    if (this.mode) {
+  get attack() {
+    if (this.powerMode) {
       const attack = this._attack * 2;
       return attack;
     }
@@ -34,11 +48,11 @@ export class Character {
   }
 
   set attack(attack) {
-      this._attack = attack;
-    } 
+    this._attack = attack;
+  }
 
   get defence() {
-    if (this.mode) {
+    if (this.powerMode) {
       const defence = this._defence * 2;
       return defence;
     }
@@ -46,11 +60,9 @@ export class Character {
   }
 
   set defence(defence) {
-      this._defence = defence;
-  } 
-
-  
-} 
+    this._defence = defence;
+  }
+}
 
 export class Bowman extends Character {
   constructor() {

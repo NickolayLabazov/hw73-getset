@@ -1,9 +1,7 @@
 {
     "extends": "airbnb-base",
     "rules": {
-        "no-throw-literal": "off",
-        "no-undef": "off",
-        "no-unused-expressions": "off",
-        "getter-return": "off"        
+        "no-underscore-dangle": "off",
+        "no-undef": "off"        
      }
 }
